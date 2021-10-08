@@ -1,38 +1,12 @@
-# create-svelte
-
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte);
-
-## Creating a project
-
-If you're seeing this, you've probably already done this step. Congrats!
-
-```bash
-# create a new project in the current directory
-npm init svelte@next
-
-# create a new project in my-app
-npm init svelte@next my-app
-```
-
-> Note: the `@next` is temporary
-
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
-```bash
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
-
-## Building
-
-Before creating a production version of your app, install an [adapter](https://kit.svelte.dev/docs#adapters) for your target environment. Then:
-
-```bash
-npm run build
-```
-
-> You can preview the built app with `npm run preview`, regardless of whether you installed an adapter. This should _not_ be used to serve your app in production.
+1. `npm init svelte@next env-var-vercel-sveltekit`
+2. Choose skeleton and choose no on everything to keep it simple
+3. `cd env-var-vercel-sveltekit`
+4. `npm i`
+5. `npm i @sveltejs/adapter-vercel@next`
+6. Add the adapter to svelte.config.js like I did in https://github.com/baukevanderlaan/env-var-vercel-sveltekit/blob/main/svelte.config.js
+7. Import and export the system environment variables like I did in https://github.com/baukevanderlaan/env-var-vercel-sveltekit/blob/main/src/env.js
+8. Import and display the variables on the frontend like I did in https://github.com/baukevanderlaan/env-var-vercel-sveltekit/blob/main/src/routes/index.svelte
+9. Deploy on Vercel with zero-config framework preset SvelteKit.
+10. Notice the var is undefined
+11. Change framework preset to Vite and override build settings to mirror those of SvelteKit
+12. Notice the var is defined.
